@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Somando Números</title>
+    <style>
+        body{
+            font: normal 18pt Arial;
+        }
+        input{
+            font: normal 15pt arial;
+            width: 200px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Somando Valores</h1>
+    <!--Aqui eu coloco os inputs que o usuário vai digitar junto com o tipo do input, o nome do input, o id e o placeholder
+    Depos eu coloco também um botão para chamar a função somar com o valor e a chamada para ação definindo o método-->
+    
+   <input type="number" name="txtn1" id="txtn1" placeholder="digite um valor">
+   <input type="number" name="txtn2" id="txtn2" placeholder="digite outro valor">
+   <input type="button" value="somar" onclick="clicar()">
+
+   <div id="resultado">Resultado: </div>
+
+    <script>
+       /*aqui eu vou criar uma função chamando o método do click que e defini lá em cima, depois vou abrir um bloco, com as variáveis que será utilizadas, ai eu escolho como quero pegar esses inputs, by class, query ou id. 
+       depois eu vou mudar, as variáveis para variáveis de numero, porque se eu deixar do jeito que tá, elas vão só concatenar, e não somar. Então vou definir mais 3 outras variáveis, passando o valor de numero pra elas, e depois chamando as variáveis ja passadas, pra eu mostrar quem vai mudar. 
+       Depois faço uma variavel de resposta, e dentro dela coloco as variaveis que eu criei de numero. 
+       Para exibir o resultado, eu chamo a variável que eu defini primeiro com o HTML, e mostro a resposta com a variável de numero que eu guardei a resposta */
+
+       function clicar(){
+
+            let tn1 = document.getElementById('txtn1')
+            let tn2 = document.getElementById('txtn2')
+
+            let soma = document.getElementById('resultado')
+
+            let n1 = Number(tn1.value)
+            let n2 = Number(tn2.value)
+            let res = n1 + n2
+
+            soma.innerHTML = `A soma foi ${res}`
+
+
+       }
+
+       
+        
+        
+    </script>   
+</body>
+</html>
