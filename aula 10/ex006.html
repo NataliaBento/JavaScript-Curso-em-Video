@@ -99,6 +99,11 @@
         Interaja...
     </div>
 
+    <div id="area2">
+        Interaja
+        
+    </div>
+
     
 
     <script>
@@ -124,6 +129,26 @@
        function sair(){
         a.innerText = 'saiu'
         a.style.background = 'pink'
+
+        var area2 = document.getElementById('area2')
+        area2.addEventListener('click', clicar)
+        area2.addEventListener('mouseenter', entrar)
+        area2.addEventListener('mouseleave', sair)
+
+        function clicar(){
+            area2.innerText =' Clicou'
+            area2.style.background = 'blue'
+        }
+
+        function entrar(){
+            area2.innerText = 'Entrou'
+            area2.style.background = 'green'
+        }
+
+        function sair (){
+            area2.innerText = 'Saiu'
+            area2.style.background = 'red'
+        }
        }
        
        
