@@ -9,13 +9,12 @@ function contar(){
         window.alert('[ERRO] insira todos os dados')
      }
      else {
-        res.innerHTML = 'Contando... <br>'
+        res.innerHTML = 'Contando...'
         let i = Number(ini.value)
         let f = Number(fim.value)
         let p = Number(passo.value)
         if (p <= 0){
-            window.alert('Passo inválido! Considerando Passo 1')
-            p = 1
+            window.alert('Passo invalido')
         }
         if (i < f){
             //Contagem crescente
